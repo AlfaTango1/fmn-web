@@ -4094,8 +4094,7 @@ Object.assign(ACT,{
       <h2>NOTAM</h2><p>${E(t('Not included — obtain current NOTAMs from the AIS / flight planning office.'))}</p>
       ${a&&wb?`<h2>${E(t('Weight & balance'))}</h2><table><tr><th></th><th>${E(t('Mass'))}</th><th>CG</th></tr><tr><td>${E(t('Take-off'))}</td><td>${Math.round(wb.m)} kg</td><td>${wb.cg.toFixed(3)} m</td></tr>${wl?`<tr><td>${E(t('Landing'))}</td><td>${Math.round(wl.m)} kg</td><td>${wl.cg.toFixed(3)} m</td></tr>`:''}</table>`:''}
       ${s?`<h2>${E(t('Sun'))}</h2><p>${E(t('Sunrise'))} ${fmtClock(s.rise)} · ${E(t('Sunset'))} ${fmtClock(s.set)}</p>`:''}
-      <h2>${E(t('ICAO flight plan'))}</h2><div class="m">${E(fplText(a,r))}</div><script>if('serviceWorker' in navigator&&location.protocol==='https:'&&!(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform()))navigator.serviceWorker.register('sw.js').catch(()=>{});</script>
-</body></html>`;
+      <h2>${E(t('ICAO flight plan'))}</h2><div class="m">${E(fplText(a,r))}</div></body></html>`;
     download(`briefing-${(MS.name||'mission').replace(/[^\w-]+/g,'_')}.html`,html,'text/html'); }
 });
 /* home tiles for the new screens */
@@ -4818,5 +4817,6 @@ setInterval(()=>{ renderStatus(); renderTabs(); if(VIEW.tab==='fly') updFlyLive(
 window.FMN={parseCoord,inverse,direct,intersect,xtrack,windTri,routeLegs,routeTrack,turnAngle,importCSV,importOpenAir,parseAipZone,readPackage,makePackage,appWithData,fmtLL,MS:()=>MS,LIB:()=>LIB,ACT,FLY,CFG,t,VIEW:()=>VIEW};
 
 </script>
+<script>if('serviceWorker' in navigator&&location.protocol==='https:'&&!(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform()))navigator.serviceWorker.register('sw.js').catch(()=>{});</script>
 </body>
 </html>
