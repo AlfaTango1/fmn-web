@@ -1,5 +1,5 @@
 /* Offline cache for the iPhone / web version. Map tiles are stored by the app itself. */
-const CACHE='fmn-ios-v43';
+const CACHE='fmn-ios-v44';
 const CDN=['https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js','https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'];
 const CORE=['./','index.html','lib/leaflet.js','lib/leaflet.css','lib/images/marker-icon.png','lib/images/marker-icon-2x.png','lib/images/marker-shadow.png','lib/images/layers.png','lib/images/layers-2x.png','manifest.webmanifest','icon-192.png','icon-512.png','apple-touch-icon.png'];
 self.addEventListener('install',e=>{ e.waitUntil(caches.open(CACHE).then(async c=>{
